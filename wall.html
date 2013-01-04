@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/dastnevis.css" type="text/css" charset="utf-8" media="screen"/>
+    <link rel="stylesheet" href="css/titr.css" type="text/css" charset="utf-8" media="screen"/>
+    <link rel="stylesheet" href="css/zar.css" type="text/css" charset="utf-8" media="screen"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" charset="utf-8" media="screen"/>
+    <link rel="stylesheet" href="css/wall.css" type="text/css" charset="utf-8" media="screen"/>
+  </head>
+
+  <body>
+    
+    <div class="outer-center">
+      <div class="body-center">
+        <div class="inner-center">
+          <div class="arrow-left"></div>
+          <div id='wall2' class="wall shadow"></div>        
+          <div id='wall1' class="wall"></div>
+          <div class="arrow-right"></div>
+        </div>      
+      </div>
+    </div>
+    <div class="modal hide fade" id="insert-select">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Insert Item to the wall!</h3>    
+      </div>
+      <div class="modal-body">
+
+    <div class="tabbable"> <!-- Only required for left/right tabs -->
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#text-tab" data-toggle="tab"><i><b class="icon-italic"></b></i> Text</a></li>
+        <li><a href="#image-tab" data-toggle="tab"><i><b class="icon-picture"></b></i> Image</a></li>
+        <li><a href="#drawing-tab" data-toggle="tab"><i><b class="icon-pencil"></b></i> Drawing</a></li>
+      </ul>
+      <div class="tab-content">
+
+        <div class="tab-pane active" id="text-tab">
+            <form class="form-horizontal" id="dummy-form">
+            <label for="input-text" class="center"><strong>Type what you want</strong></label>
+            <input type="text" class="input-text full-width" id="input-text"/>
+            <table class="full-width">
+              <tr>
+                <td class="center">
+                  <label for="font">Text Style</label>
+                  <select id="font">
+                    <option value="dast_nevisregular">Dastnevis</option><option value="tahoma">Tahoma</option><option value="arial">Arial</option><option value="serif">Serif</option><option value="sans-serif">Sans Serif</option><option value="xb_zarregular">Zar</option><option value="xb_titreregular">Titr</option>
+                  </select>
+                </td>
+                <td class="center">
+                  <label for="size">Text Size</label>
+                  <select id="size">
+                    <option value="0">12</option><option value="1">14</option><option value="2">16</option><option value="3">18</option><option value="4">20</option><option value="5">22</option><option value="6">24</option><option value="7">26</option><option value="8">28</option><option value="9">30</option><option value="10">32</option><option value="10">34</option><option value="10">36</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="center">
+                  <label for="degree">Text Degree</label>
+                  <select id="degree">
+                    <option value="0">-180</option><option value="1">-150</option><option value="2">-120</option><option value="3">-90</option><option value="4">-60</option><option value="5">-30</option><option value="6">0</option><option value="7">30</option><option value="8">60</option><option value="9">90</option><option value="10">120</option><option value="11">150</option><option value="12">180</option>
+                  </select>
+                </td>
+                <td class="center">
+                  <label for="duration">Duration</label>
+                  <select id="duration">
+                    <option value="0">30 Min</option><option value="1">1 Hour</option><option value="2">12 Hours</option><option value="3">1 Day</option><option value="4">7 Days</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            </form>
+
+
+        </div>
+        <div class="tab-pane" id="image-tab">
+          <form action="upload.php" method="post" enctype="multipart/form-data" target="upload_target" class="form-horizontal">
+            <label class="center"><strong>Browse for image</strong></label>
+            <div class="input-append center full-width">
+              <span class="input-text uneditable-input">Select image file</span>
+              <button class="btn" type="button">Browse...</button>
+          </div>
+            <!--File: <input name="myfile" type="file" />-->
+        </form>
+        <iframe src="#" class="hidden"></iframe>
+        </div>
+        <div class="tab-pane" id="drawing-tab">
+          <p>Under heavy construction!</p>
+        </div>
+      </div>
+    </div>
+
+      </div>
+      <div class="modal-footer">
+      <a href="#" class="btn btn-primary" id="paste-text">Submit</a>    
+      </div>
+    </div>
+
+
+    <div class="modal hide fade" id="item-actions">
+      <div class="modal-header">
+        <h3 class="center">Actions</h3> 
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs nav-stacked center">
+          <li><a href="#" id="richer">Richer <i class="icon-thumbs-up"></i></a></li>
+          <li><a href="#" id="weaker">Weaker <i class="icon-thumbs-down"></i></a></li>
+        </ul>
+        <ul class="nav nav-tabs nav-stacked center">
+          <li><a href="#" id="cancel-action">Cancel</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="js/raphael-min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>
+

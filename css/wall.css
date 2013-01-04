@@ -1,0 +1,97 @@
+tspan::selection {
+	background: transparent; /* Safari */
+	color: white;
+	}
+tspan::-moz-selection {
+	background: transparent; /* Firefox */
+	color: white;
+}
+
+.outer-center {
+	text-align: center;
+}
+
+.body-center {
+	text-align: left;
+	width: 640px;
+	/*width: 768px;*/
+	margin: 0 auto;
+	text-align: center;
+}
+
+.inner-center {
+	height: 488px;
+	position: absolute;
+	top: 50px;
+}
+
+.shadow {
+	border-width: 2px;
+	box-shadow: 0px 0px 15px #888;
+	-moz-box-shadow: 0px 0px 15px #888;
+	-webkit-box-shadow: 0px 0px 15px #888;
+	-o-box-shadow: 0px 0px 15px #888;
+}
+
+.wall {
+	/*left: 64px;*/
+	height: 488px;
+	position: absolute;
+	/*top: 50px;*/
+}
+
+.arrow-left {
+	position: absolute;
+	top: 212;
+	left: 5px;
+	width: 64px;
+	height: 64px;
+	z-index: 10;
+	background-image: url('../img/left.png');
+	background-size: 64px 64px;
+}
+.arrow-left:hover {
+	background-image: url('../img/left-hover.png');
+}
+
+.arrow-right {
+	position: absolute;
+	top: 212;
+	left: 561px;
+	width: 64px;
+	height: 64px;
+	z-index: 10;
+	background-image: url('../img/right.png');
+	background-size: 64px 64px;
+}
+.arrow-right:hover {
+	background-image: url('../img/right-hover.png');
+}
+
+.center {
+	text-align: center;
+}
+
+input.input-text {
+	text-align: center;
+	direction: rtl;
+	font-family: 'dast_nevisregular';
+	font-size: 16px;
+	height: 30px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+#item-actions {
+	width: 260px;
+    margin: -115px 0 0 -115px
+}
+
+.modal {
+	box-shadow: 0px 0px 15px #000;
+	-moz-box-shadow: 0px 0px 15px #000;
+	-webkit-box-shadow: 0px 0px 15px #000;
+	-o-box-shadow: 0px 0px 15px #000;
+}
